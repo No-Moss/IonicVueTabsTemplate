@@ -11,6 +11,7 @@
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
       </ion-header>
+      <ActionSheetContainer />
       <SwiperContainer />
       <ExploreContainer name="Tab 1 page" />
     </ion-content>
@@ -27,4 +28,5 @@ import {
 } from "@ionic/vue";
 import ExploreContainer from "@/components/ExploreContainer.vue";
 import SwiperContainer from "@/components/SwiperContainer.vue";
+import ActionSheetContainer from "@/components/ActionSheetContainer.vue";
 </script>
