@@ -42,6 +42,14 @@ nav {
   display: contents;
 }
 @include breakpoint(medium) {
+  ion-tab-bar::before {
+    content: url("../assets/logos/logo-vue.svg");
+    transform: scale(0.5, 0.5);
+    height: 69px;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
   ion-tab-bar {
     position: fixed;
     left: 0;

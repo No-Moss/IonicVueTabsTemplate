@@ -1,7 +1,10 @@
 <template>
   <ion-header>
     <ion-toolbar>
-      <ion-title>{{ props.title }}</ion-title>
+      <div class="toolbar-container">
+        <img src="../assets/logos/logo-vue.svg" alt="Vue Icon" />
+        <ion-title>{{ props.title }}</ion-title>
+      </div>
     </ion-toolbar>
   </ion-header>
 </template>
@@ -15,9 +18,26 @@ const props = defineProps({
 </script>
 <style lang="scss" scoped>
 @import "@/theme/breakpoints.scss";
+.toolbar-container {
+  display: flex;
+}
+img {
+  content: url("../assets/logos/logo-vue.svg");
+  max-height: 30px;
+  margin: 10px;
+}
+ion-title {
+  padding: 0px;
+}
 @include breakpoint(medium) {
+  img {
+    display: none;
+  }
   ion-toolbar {
     left: 150px;
+  }
+  ion-title {
+    padding-left: 10px;
   }
 }
 </style>
