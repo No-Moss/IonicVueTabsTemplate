@@ -4,7 +4,7 @@
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom"
         ><nav>
-          <ion-tab-button tab="tab1" href="/tabs/tab1">
+          <ion-tab-button class="tab1" tab="tab1" href="/tabs/tab1">
             <ion-icon aria-hidden="true" :icon="triangle" />
             <ion-label>Tab 1</ion-label>
           </ion-tab-button>
@@ -44,13 +44,16 @@ nav {
 @include breakpoint(medium) {
   ion-tab-bar {
     position: fixed;
-    z-index: 0;
     left: 0;
     width: 150px;
     height: 100vh;
     flex-direction: column;
-    place-content: flex-start;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  ion-tab-button {
+    background-color: white;
+    color: black;
+    border: red solid 2px;
+    flex-direction: row;
   }
 }
 </style>
