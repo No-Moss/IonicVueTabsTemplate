@@ -50,7 +50,7 @@ defineProps({
 #container {
   color: green;
   @include breakpoint(medium) {
-    background: red;
+    color: red;
   }
 }
 </style>
