@@ -2,7 +2,7 @@
   <ion-page>
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
-      <ion-tab-bar slot="bottom"
+      <ion-tab-bar
         ><nav>
           <ion-tab-button class="tab1" tab="tab1" href="/tabs/tab1">
             <ion-icon aria-hidden="true" :icon="triangle" />
