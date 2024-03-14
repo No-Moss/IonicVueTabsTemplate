@@ -48,12 +48,17 @@ nav {
     width: 150px;
     height: 100vh;
     flex-direction: column;
+    place-content: flex-start;
+    display: flex;
   }
   ion-tab-button {
+    display: flex;
     background-color: white;
     color: black;
     border: red solid 2px;
     flex-direction: row;
+    max-height: 60px;
+    width: 100%;
   }
 }
 </style>
