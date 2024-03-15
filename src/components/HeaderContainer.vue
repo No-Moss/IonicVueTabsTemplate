@@ -34,7 +34,9 @@ ion-title {
     display: none;
   }
   ion-toolbar {
+    --background: var(--ion-color-dark);
     left: 150px;
+    color: var(--ion-color-light);
   }
   ion-title {
     padding-left: 10px;

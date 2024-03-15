@@ -58,26 +58,30 @@ nav {
   }
   ion-tab-bar {
     position: fixed;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
     left: 0;
     width: 150px;
     height: 100vh;
     flex-direction: column;
     place-content: flex-start;
     display: flex;
-    background-color: white;
+    background-color: var(--ion-color-dark);
     gap: 5px;
     :hover {
-      background: black;
+      background: var(--ion-background-color);
     }
   }
   ion-tab-button {
     display: flex;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: white;
-    color: black;
+    background-color: var(--ion-color-dark);
+    color: var(--ion-background-color);
     flex-direction: row;
     max-height: 60px;
     width: 100%;
+    :hover {
+      color: var(--ion-color-dark);
+    }
   }
   .tab-button-content {
     height: 100%;
