@@ -1,0 +1,18 @@
+$breakpoints: (
+  //Caters to small mobile displays (eg: Galaxy Fold)
+  xxsmall: 280px,
+  //Caters to most mobile displays (eg: iPhone 12 Pro/Max)
+  xsmall: 360px,
+  //Caters to small tablets (eg: Samsung Galaxy S20 Ultra)
+  small: 480px,
+  //Caters to large tablets (eg: Asus Zenbook Fold)
+  medium: 769px,
+  //Caters to desktop
+  large: 1200px
+);
+
+@mixin breakpoint($name) {
+  @media (min-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}
