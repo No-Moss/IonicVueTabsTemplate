@@ -50,7 +50,7 @@ nav {
 @include breakpoint(medium) {
   ion-tab-bar::before {
     content: url("../assets/logos/logo-vue.svg");
-    transform: scale(0.5, 0.5);
+    transform: scale(0.5);
     height: 69px;
     width: 100%;
     padding-top: 10px;
@@ -81,6 +81,11 @@ nav {
     align-items: center;
     gap: 10px;
     padding-left: 10px;
+  }
+  ion-icon {
+    transform: scale(2);
+    margin-left: 5px;
+    margin-right: 10px;
   }
 }
 </style>
