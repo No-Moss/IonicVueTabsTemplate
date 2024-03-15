@@ -1,10 +1,14 @@
 $breakpoints: (
   xxsmall: 280px,
+  //Caters to small mobile displays (eg: Galaxy Fold)
   xsmall: 360px,
+  //Caters to most mobile displays (eg: iPhone 12 Pro/Max)
   small: 480px,
+  //Caters to small tablets (eg: Samsung Galaxy S20 Ultra)
   medium: 769px,
-  large: 960px,
-  wide: 1200px,
+  //Caters to large tablets (eg: Asus Zenbook Fold)
+  large: 1200px,
+  //Caters to desktop
 );
 
 @mixin breakpoint($name) {
