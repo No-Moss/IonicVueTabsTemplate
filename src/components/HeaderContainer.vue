@@ -29,14 +29,16 @@ img {
 ion-title {
   padding: 0px;
 }
+ion-toolbar {
+  --background: var(--ion-color-dark);
+  color: var(--ion-color-light);
+}
 @include breakpoint(medium) {
   img {
     display: none;
   }
   ion-toolbar {
-    --background: var(--ion-color-dark);
     left: 150px;
-    color: var(--ion-color-light);
   }
   ion-title {
     padding-left: 10px;
