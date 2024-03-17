@@ -23,3 +23,8 @@ import {
 import ExploreContainer from "@/components/ExploreContainer.vue";
 import HeaderContainer from "@/components/HeaderContainer.vue";
 </script>
+<style scoped>
+ion-content {
+  --background: white;
+}
+</style>
