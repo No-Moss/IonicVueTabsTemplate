@@ -2,7 +2,11 @@
   <ion-header>
     <ion-toolbar>
       <div class="toolbar-container">
-        <img src="../assets/logos/logo-vue.svg" alt="Vue Icon" />
+        <ion-icon
+          :icon="logoVue"
+          class="site-logo"
+          @click="$router.push({ name: 'Home' })"
+        />
         <ion-title>{{ props.title }}</ion-title>
       </div>
     </ion-toolbar>
@@ -10,8 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import { IonHeader, IonToolbar, IonTitle } from "@ionic/vue";
-
+import { IonHeader, IonToolbar, IonTitle, IonIcon } from "@ionic/vue";
+import { logoVue } from "ionicons/icons";
 const props = defineProps({
   title: { type: String, required: false },
 });
@@ -21,11 +25,6 @@ const props = defineProps({
 .toolbar-container {
   display: flex;
 }
-img {
-  content: url("../assets/logos/logo-vue.svg");
-  max-height: 30px;
-  margin: 10px;
-}
 ion-title {
   padding: 0px;
 }
@@ -33,8 +32,13 @@ ion-toolbar {
   --background: var(--ion-color-dark);
   color: var(--ion-color-light);
 }
+.site-logo {
+  transform: scale(2);
+  margin: 5px 20px 0px 20px;
+  cursor: pointer;
+}
 @include breakpoint(medium) {
-  img {
+  .site-logo {
     display: none;
   }
   ion-toolbar {
