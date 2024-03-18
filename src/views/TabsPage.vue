@@ -10,24 +10,24 @@
             class="site-logo"
             @click="$router.push({ name: 'Home' })"
           />
-          <ion-tab-button class="tab1" tab="tab1" href="/tabs/tab1">
+          <ion-tab-button class="home" tab="Home" href="/tabs/Home">
             <div class="tab-button-content">
               <ion-icon aria-hidden="true" :icon="triangle" />
-              <ion-label>Tab 1</ion-label>
+              <ion-label>Home</ion-label>
             </div>
           </ion-tab-button>
 
-          <ion-tab-button tab="tab2" href="/tabs/tab2">
+          <ion-tab-button tab="Explore" href="/tabs/Explore">
             <div class="tab-button-content">
               <ion-icon aria-hidden="true" :icon="ellipse" />
-              <ion-label>Tab 2</ion-label>
+              <ion-label>Explore</ion-label>
             </div>
           </ion-tab-button>
 
-          <ion-tab-button tab="tab3" href="/tabs/tab3">
+          <ion-tab-button tab="Profile" href="/tabs/Profile">
             <div class="tab-button-content">
               <ion-icon aria-hidden="true" :icon="square" />
-              <ion-label>Tab 3</ion-label>
+              <ion-label>Profile</ion-label>
             </div>
           </ion-tab-button>
         </nav>
