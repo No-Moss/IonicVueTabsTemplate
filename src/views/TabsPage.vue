@@ -57,7 +57,7 @@ nav {
   display: contents;
 }
 ion-tab-bar {
-  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--ion-color-dark);
   :hover {
     background: var(--ion-background-color);
@@ -65,7 +65,6 @@ ion-tab-bar {
   }
 }
 ion-tab-button {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--ion-color-dark);
   color: var(--ion-background-color);
 }
