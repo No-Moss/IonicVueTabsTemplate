@@ -37,7 +37,6 @@ defineProps({
 }
 </style>
 <style lang="scss" scoped>
-@import "@/theme/breakpoints.scss";
 #container {
   color: var(--ion-color-light);
 }
