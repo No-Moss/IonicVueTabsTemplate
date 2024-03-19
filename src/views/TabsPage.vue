@@ -108,10 +108,16 @@ ion-icon {
     }
   }
   ion-tab-button {
-    display: flex;
-    flex-direction: row;
     max-height: 60px;
     width: 100%;
+    padding: 0px;
+    ion-icon {
+      margin-left: 0px;
+      margin-right: 20px;
+    }
+    ion-label {
+      font-size: 20px;
+    }
   }
   .tab-button-content {
     height: 100%;
