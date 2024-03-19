@@ -38,6 +38,6 @@ defineProps({
 </style>
 <style lang="scss" scoped>
 #container {
-  color: var(--ion-color-light);
+  color: var(--ion-color-dark);
 }
 </style>
