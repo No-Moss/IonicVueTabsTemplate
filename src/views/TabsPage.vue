@@ -60,13 +60,16 @@ ion-tab-bar {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--ion-color-dark);
   :hover {
-    background: var(--ion-background-color);
+    background: var(--ion-color-light);
     color: var(--ion-color-dark);
   }
 }
 ion-tab-button {
   background-color: var(--ion-color-dark);
-  color: var(--ion-background-color);
+  color: var(--ion-color-light);
+  :hover {
+    background: var(--ion-color-light);
+  }
 }
 ion-tab-button::part(native):hover {
   color: var(--ion-color-dark);
@@ -76,14 +79,11 @@ ion-icon {
   margin-left: 5px;
   margin-right: 10px;
 }
-.tab-button-content:hover {
-  background: var(--ion-background-color);
-  color: var(--ion-color-dark);
-}
 @include breakpoint(medium) {
+  //displays site logo in the global navigation bar
   .site-logo {
     display: flex;
-    color: var(--ion-background-color);
+    color: var(--ion-color-light);
     transform: scale(1.25);
     height: 69px;
     width: 100%;
@@ -91,15 +91,13 @@ ion-icon {
     margin-bottom: 10px;
     cursor: pointer;
   }
-
   .site-logo:hover {
     color: green;
   }
-
   ion-tab-bar {
     position: fixed;
     left: 0;
-    width: 150px;
+    width: 200px;
     height: 100vh;
     flex-direction: column;
     place-content: flex-start;

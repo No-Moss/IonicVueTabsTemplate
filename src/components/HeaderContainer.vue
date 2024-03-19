@@ -42,7 +42,8 @@ ion-toolbar {
     display: none;
   }
   ion-toolbar {
-    left: 150px;
+    left: 200px;
+    --background: var(--ion-color-dark);
   }
   ion-title {
     padding-left: 10px;
