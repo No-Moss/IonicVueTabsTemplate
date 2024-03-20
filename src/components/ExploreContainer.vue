@@ -1,15 +1,6 @@
 <template>
   <div id="container">
     <strong>{{ name }}</strong>
-    <p>
-      Explore
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://ionicframework.com/docs/components"
-        >UI Components</a
-      >
-    </p>
   </div>
 </template>
 
@@ -46,11 +37,7 @@ defineProps({
 }
 </style>
 <style lang="scss" scoped>
-@import "@/theme/breakpoints.scss";
 #container {
-  color: green;
-  @include breakpoint(medium) {
-    color: red;
-  }
+  color: var(--ion-color-dark);
 }
 </style>
