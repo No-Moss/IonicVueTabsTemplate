@@ -9,6 +9,6 @@
 
 <script setup lang="ts">
 import { IonPage, IonContent } from "@ionic/vue";
-import ExploreContainer from "@/components/ExploreContainer.vue";
-import HeaderContainer from "@/components/HeaderContainer.vue";
+import ExploreContainer from "@/components/Explore/ExploreContainer.vue";
+import HeaderContainer from "@/components/Header/HeaderContainer.vue";
 </script>
