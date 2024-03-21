@@ -3,7 +3,7 @@
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
 
-      <ion-tab-bar>
+      <ion-tab-bar data-test="global-nav-bar">
         <nav>
           <ion-icon
             :icon="logoVue"
