@@ -6,7 +6,7 @@ const sizes = ["macbook-16", "iphone-8", "samsung-s10", "ipad-2"];
 
 describe("When the application is loaded", () => {
   beforeEach(() => {
-    cy.visit("/tabs");
+    cy.visit("/");
   });
   sizes.forEach((size) => {
     it("shows all the navigation buttons on mobile, tablet, desktop, ios and android screens and devices", () => {
@@ -22,13 +22,13 @@ describe("When the application is loaded", () => {
   describe("When a global navigation button is selected", () => {
     it("navigates to the correct page", () => {
       cy.get(tabSelector).contains("Home").click();
-      cy.get(headerSelector).should("eq", "Home");
+      cy.get(headerSelector).should("contain", "Home");
 
       cy.get(tabSelector).contains("Explore").click();
-      cy.get(headerSelector).should("eq", "Explore");
+      cy.get(headerSelector).should("contain", "Explore");
 
       cy.get(tabSelector).contains("Profile").click();
-      cy.get(headerSelector).should("eq", "Profile");
+      cy.get(headerSelector).should("contain", "Profile");
     });
   });
 });

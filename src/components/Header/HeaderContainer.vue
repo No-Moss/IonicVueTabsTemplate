@@ -1,7 +1,7 @@
 <template>
   <ion-header>
-    <ion-toolbar data-test="header-bar">
-      <div class="toolbar-container">
+    <ion-toolbar>
+      <div class="toolbar-container" data-test="header-bar">
         <ion-title>{{ props.title }}</ion-title>
       </div>
     </ion-toolbar>
