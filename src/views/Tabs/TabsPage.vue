@@ -11,21 +11,21 @@
             @click="$router.push({ name: 'Home' })"
           />
           <ion-tab-button class="home" tab="Home" href="/tabs/Home">
-            <div class="tab-button-content">
+            <div class="tab-button-content" data-test="home-button">
               <ion-icon aria-hidden="true" :icon="triangle" />
               <ion-label>Home</ion-label>
             </div>
           </ion-tab-button>
 
           <ion-tab-button tab="Explore" href="/tabs/Explore">
-            <div class="tab-button-content">
+            <div class="tab-button-content" data-test="explore-button">
               <ion-icon aria-hidden="true" :icon="ellipse" />
               <ion-label>Explore</ion-label>
             </div>
           </ion-tab-button>
 
           <ion-tab-button tab="Profile" href="/tabs/Profile">
-            <div class="tab-button-content">
+            <div class="tab-button-content" data-test="profile-button">
               <ion-icon aria-hidden="true" :icon="square" />
               <ion-label>Profile</ion-label>
             </div>

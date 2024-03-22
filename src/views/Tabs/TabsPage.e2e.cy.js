@@ -3,6 +3,9 @@
 const tabSelector = '[data-test="global-nav-bar"]';
 const headerSelector = '[data-test="header-bar"]';
 const sizes = ["macbook-16", "iphone-8", "samsung-s10", "ipad-2"];
+const homeBtnSelector = '[data-test="home-button"]';
+const exploreBtnSelector = '[data-test="explore-button"]';
+const profileBtnSelector = '[data-test="profile-button"]';
 
 describe("When the application is loaded", () => {
   beforeEach(() => {
@@ -21,13 +24,13 @@ describe("When the application is loaded", () => {
   });
   describe("When a global navigation button is selected", () => {
     it("navigates to the correct page", () => {
-      cy.get(tabSelector).contains("Home").click();
+      cy.get(tabSelector).find(homeBtnSelector).click();
       cy.get(headerSelector).should("contain", "Home");
 
-      cy.get(tabSelector).contains("Explore").click();
+      cy.get(tabSelector).find(exploreBtnSelector).click();
       cy.get(headerSelector).should("contain", "Explore");
 
-      cy.get(tabSelector).contains("Profile").click();
+      cy.get(tabSelector).find(profileBtnSelector).click();
       cy.get(headerSelector).should("contain", "Profile");
     });
   });
