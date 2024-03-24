@@ -14,13 +14,13 @@ describe("When the application is loaded", () => {
   sizes.forEach((size) => {
     it("shows all the navigation buttons on mobile, tablet, desktop, ios and android screens and devices", () => {
       cy.viewport(size);
-      cy.get(tabSelector).contains("Home");
-      cy.get(tabSelector).contains("Explore");
-      cy.get(tabSelector).contains("Profile");
+      cy.get(tabSelector).should("contain", "Home");
+      cy.get(tabSelector).should("contain", "Explore");
+      cy.get(tabSelector).should("contain", "Profile");
     });
   });
   it("shows home page by default", () => {
-    cy.get(headerSelector).contains("Home");
+    cy.get(headerSelector).should("contain", "Home");
   });
   describe("When a global navigation button is selected", () => {
     it("navigates to the correct page", () => {
