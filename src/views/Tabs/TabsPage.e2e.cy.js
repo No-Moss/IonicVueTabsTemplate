@@ -1,5 +1,3 @@
-// import { mount } from "@vue/test-utils";
-// import TabsPage from "./TabsPage.vue";
 const tabSelector = '[data-test="global-nav-bar"]';
 const headerSelector = '[data-test="header-bar"]';
 const sizes = ["macbook-16", "iphone-8", "samsung-s10", "ipad-2"];
