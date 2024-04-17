@@ -89,6 +89,9 @@ ion-icon {
   margin-left: 5px;
   margin-right: 10px;
 }
+.ion-focused {
+  color: var(--ion-color-dark);
+}
 @include breakpoint(medium) {
   //displays and sets styling for site logo located in the global navigation bar
   .site-logo {
@@ -132,9 +135,6 @@ ion-icon {
     ion-label {
       font-size: 20px;
     }
-  }
-  .ion-focused {
-    color: var(--ion-color-dark);
   }
   //configures the alignment of and spacing between elements in the navigation bar button
   .tab-button-content {
