@@ -10,7 +10,7 @@
             class="site-logo"
             @click="$router.push({ name: 'Home' })"
             tabindex="0"
-            @keypress.enter="$router.push({ name: 'Home' })"
+            @keyup.enter="$router.push({ name: 'Home' })"
           />
           <ion-tab-button class="home" tab="Home" href="/tabs/Home">
             <div class="tab-button-content" data-test="home-button">
