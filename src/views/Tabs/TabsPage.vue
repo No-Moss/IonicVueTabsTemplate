@@ -5,13 +5,9 @@
 
       <ion-tab-bar data-test="global-nav-bar">
         <nav>
-          <ion-icon
-            :icon="logoVue"
-            class="site-logo"
-            @click="$router.push({ name: 'Home' })"
-            tabindex="0"
-            @keyup.enter="$router.push({ name: 'Home' })"
-          />
+          <router-link to="Home" class="icon-router-link">
+            <ion-icon :icon="logoVue" class="site-logo"
+          /></router-link>
           <ion-tab-button class="home" tab="Home" href="/tabs/Home">
             <div class="tab-button-content" data-test="home-button">
               <ion-icon aria-hidden="true" :icon="triangle" />
@@ -52,16 +48,15 @@ import { ellipse, square, triangle, logoVue } from "ionicons/icons";
 </script>
 <style lang="scss" scoped>
 @import "@/theme/breakpoints.scss";
-//logo is not displayed in the mobile mode navigation bar
+
 .site-logo {
   display: none;
 }
-//nav element assigns accessibility landmark for global navigation
+
 nav {
   display: contents;
 }
-//navigation bar styling for all screen sizes.
-//contrast colours shown on hover/click (this is overridden for site logo background on breakpoint below).
+
 ion-tab-bar {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--ion-color-dark);
@@ -70,7 +65,7 @@ ion-tab-bar {
     color: var(--ion-color-dark);
   }
 }
-//navigation bar button and hover styling for all screen sizes
+
 ion-tab-button {
   background-color: var(--ion-color-dark);
   color: var(--ion-color-light);
@@ -78,12 +73,11 @@ ion-tab-button {
     background: var(--ion-color-light);
   }
 }
-//allocates colour to navigation bar button text, which is in a shadow element; part="native".
+
 ion-tab-button::part(native):hover {
   color: var(--ion-color-dark);
 }
-//sets size and margins for navigation bar button icons.
-//the measurements are the same on all screen sizes.
+
 ion-icon {
   transform: scale(2);
   margin-left: 5px;
@@ -94,26 +88,31 @@ ion-icon {
   border: solid var(--ion-color-primary-shade) 3px;
 }
 @include breakpoint(medium) {
-  //displays and sets styling for site logo located in the global navigation bar
   .site-logo {
     display: flex;
     color: var(--ion-color-light);
     transform: scale(1.25);
     height: 69px;
     width: 100%;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin: 20px auto 10px auto;
     cursor: pointer;
     &:hover {
       color: var(--ion-color-primary-shade);
+      background: transparent;
     }
+  }
+
+  .icon-router-link {
+    width: 100%;
     &:focus-visible {
       outline: none;
       border: solid var(--ion-color-primary-shade) 3px;
     }
+    &:hover {
+      background: transparent;
+    }
   }
 
-  //changes navigation bar format to be displayed vertically on the left side of the screen
   ion-tab-bar {
     position: fixed;
     left: 0;
@@ -123,12 +122,8 @@ ion-icon {
     place-content: flex-start;
     display: flex;
     gap: 5px;
-    //sets navigation bar background colour behind the site logo to remain consistent upon hover (rather than changing to white)
-    .site-logo:hover {
-      background: var(--ion-color-dark);
-    }
   }
-  //sets the size, padding and margin parameters for ion-tab-button and the elements within it
+
   ion-tab-button {
     max-height: 60px;
     width: 100%;
@@ -141,7 +136,7 @@ ion-icon {
       font-size: 20px;
     }
   }
-  //configures the alignment of and spacing between elements in the navigation bar button
+
   .tab-button-content {
     height: 100%;
     width: 100%;
