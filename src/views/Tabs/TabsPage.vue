@@ -5,11 +5,12 @@
 
       <ion-tab-bar data-test="global-nav-bar">
         <nav>
-          <ion-icon
-            :icon="logoVue"
-            class="site-logo"
+          <ion-button
+            class="site-logo-button"
             @click="$router.push({ name: 'Home' })"
-          />
+          >
+            <ion-icon :icon="logoVue" class="site-logo"
+          /></ion-button>
           <ion-tab-button class="home" tab="Home" href="/tabs/Home">
             <div class="tab-button-content" data-test="home-button">
               <ion-icon aria-hidden="true" :icon="triangle" />
@@ -43,6 +44,7 @@ import {
   IonTabs,
   IonLabel,
   IonIcon,
+  IonButton,
   IonPage,
   IonRouterOutlet,
 } from "@ionic/vue";
@@ -50,10 +52,6 @@ import { ellipse, square, triangle, logoVue } from "ionicons/icons";
 </script>
 <style lang="scss" scoped>
 @import "@/theme/breakpoints.scss";
-//logo is not displayed in the mobile mode navigation bar
-.site-logo {
-  display: none;
-}
 //nav element assigns accessibility landmark for global navigation
 nav {
   display: contents;
@@ -87,22 +85,45 @@ ion-icon {
   margin-left: 5px;
   margin-right: 10px;
 }
+//sets a dark colour to text when tabbed
+.ion-focused {
+  color: var(--ion-color-dark);
+}
+//logo is not displayed in the mobile mode navigation bar
+.site-logo-button {
+  display: none;
+}
 @include breakpoint(medium) {
-  //displays and sets styling for site logo located in the global navigation bar
-  .site-logo {
-    display: flex;
-    color: var(--ion-color-light);
-    transform: scale(1.25);
-    height: 69px;
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
   //changes site logo colour upon hover
-  .site-logo:hover {
-    color: green;
+
+  .site-logo-button {
+    display: flex;
+    width: 60%;
+    height: 100px;
+    --background: transparent;
+    --box-shadow: 0px;
+    margin: 20px 10px 0px 10px;
+    z-index: 5;
+    pointer-events: none;
+
+    .site-logo {
+      display: flex;
+      color: var(--ion-color-light);
+      transform: scale(1.25);
+      height: 69px;
+      width: 100%;
+      cursor: pointer;
+      z-index: 10;
+
+      &:hover {
+        color: green;
+      }
+    }
+    &:hover {
+      pointer-events: none;
+    }
   }
+
   //changes navigation bar format to be displayed vertically on the left side of the screen
   ion-tab-bar {
     position: fixed;
