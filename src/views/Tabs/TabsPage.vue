@@ -90,7 +90,8 @@ ion-icon {
   margin-right: 10px;
 }
 .ion-focused {
-  color: var(--ion-color-dark);
+  --background-focused: var(--ion-color-dark);
+  border: solid var(--ion-color-primary-shade) 3px;
 }
 @include breakpoint(medium) {
   //displays and sets styling for site logo located in the global navigation bar
@@ -103,11 +104,15 @@ ion-icon {
     margin-top: 30px;
     margin-bottom: 10px;
     cursor: pointer;
+    &:hover {
+      color: var(--ion-color-primary-shade);
+    }
+    &:focus-visible {
+      outline: none;
+      border: solid var(--ion-color-primary-shade) 3px;
+    }
   }
-  //changes site logo colour upon hover
-  .site-logo:hover {
-    color: green;
-  }
+
   //changes navigation bar format to be displayed vertically on the left side of the screen
   ion-tab-bar {
     position: fixed;
