@@ -1,5 +1,6 @@
 <template>
   <ion-page>
+    <SkipMenu></SkipMenu>
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
 
@@ -45,6 +46,7 @@ import {
   IonRouterOutlet,
 } from "@ionic/vue";
 import { ellipse, square, triangle, logoVue } from "ionicons/icons";
+import SkipMenu from "@/components/SkipMenu/SkipMenu.vue";
 </script>
 <style lang="scss" scoped>
 @import "@/theme/breakpoints.scss";
