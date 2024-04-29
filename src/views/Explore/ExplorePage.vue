@@ -1,7 +1,7 @@
 <template>
   <ion-page>
     <HeaderContainer title="Explore" />
-    <ion-content :fullscreen="true" id="mainContentId">
+    <ion-content :fullscreen="true" id="explore-main-content" tabindex="0">
       <ExploreContainer name="Explore page" />
     </ion-content>
   </ion-page>
