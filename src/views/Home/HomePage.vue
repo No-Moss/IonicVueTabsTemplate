@@ -16,11 +16,16 @@ import HeaderContainer from "@/components/Header/HeaderContainer.vue";
 </script>
 
 <style lang="scss" scoped>
+@import "@/theme/breakpoints.scss";
+@include breakpoint(medium) {
+  .content-container {
+    width: calc(100% - 200px);
+    left: 200px;
+  }
+}
 .content-container {
   position: relative;
-  left: 200px;
   height: 100%;
-  width: calc(100% - 200px);
   &:focus-visible {
     border: solid var(--ion-color-primary-shade) 5px;
   }
