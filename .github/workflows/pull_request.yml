@@ -5,9 +5,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Running linting check..."
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Installing Prettier
-        run: npm install prettier
-      - run: npx prettier . --check
+      - name: Run Prettier linting check
+        run: npx prettier . --check
