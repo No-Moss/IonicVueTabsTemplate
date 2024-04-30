@@ -3,7 +3,7 @@
     <HeaderContainer title="Home" />
     <ion-content :fullscreen="true">
       <div class="content-container" id="home-main-content" tabindex="0">
-        <ExploreContainer name="Home page" />
+        <ExploreContainer name="Home page" tabIndex="-1" />
       </div>
     </ion-content>
   </ion-page>
