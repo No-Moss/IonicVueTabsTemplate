@@ -51,7 +51,7 @@ import SkipMenu from "@/components/SkipMenu/SkipMenu.vue";
 <style lang="scss" scoped>
 @import "@/theme/breakpoints.scss";
 
-.site-logo {
+.site-logo, .icon-router-link {
   display: none;
 }
 
