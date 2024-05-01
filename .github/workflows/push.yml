@@ -1,5 +1,4 @@
-name: PR Tests
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Push Tests
 on: [push]
 jobs:
   Run-Linting-Check:
