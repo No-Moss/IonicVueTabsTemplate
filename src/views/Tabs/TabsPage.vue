@@ -106,6 +106,7 @@ ion-icon {
   }
 
   .icon-router-link {
+    display: flex;
     width: 100%;
     &:focus-visible {
       outline: none;
