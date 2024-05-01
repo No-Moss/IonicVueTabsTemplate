@@ -51,22 +51,22 @@ test.describe("When the application is loaded", () => {
         await page.setViewportSize(getViewportSize(size)); // Set custom viewport size
         await page.waitForSelector(tabSelector);
         expect(await page.$eval(tabSelector, (el) => el.textContent)).toContain(
-          "Home"
+          "Home",
         );
         expect(await page.$eval(tabSelector, (el) => el.textContent)).toContain(
-          "Explore"
+          "Explore",
         );
         expect(await page.$eval(tabSelector, (el) => el.textContent)).toContain(
-          "Profile"
+          "Profile",
         );
-      }
+      },
     );
   });
 
   test("shows home page by default", async () => {
     await page.waitForSelector(headerSelector);
     expect(await page.$eval(headerSelector, (el) => el.textContent)).toContain(
-      "Home"
+      "Home",
     );
   });
 
@@ -76,19 +76,19 @@ test.describe("When the application is loaded", () => {
       await page.click(homeBtnSelector);
       await page.waitForSelector(headerSelector);
       expect(
-        await page.$eval(headerSelector, (el) => el.textContent)
+        await page.$eval(headerSelector, (el) => el.textContent),
       ).toContain("Home");
 
       await page.click(exploreBtnSelector);
       await page.waitForSelector(headerSelector);
       expect(
-        await page.$eval(headerSelector, (el) => el.textContent)
+        await page.$eval(headerSelector, (el) => el.textContent),
       ).toContain("Explore");
 
       await page.click(profileBtnSelector);
       await page.waitForSelector(headerSelector);
       expect(
-        await page.$eval(headerSelector, (el) => el.textContent)
+        await page.$eval(headerSelector, (el) => el.textContent),
       ).toContain("Profile");
     });
   });
