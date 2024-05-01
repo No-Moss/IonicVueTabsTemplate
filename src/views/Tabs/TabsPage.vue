@@ -41,7 +41,6 @@ import {
   IonTabs,
   IonLabel,
   IonIcon,
-  IonButton,
   IonPage,
   IonRouterOutlet,
 } from "@ionic/vue";

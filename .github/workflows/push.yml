@@ -7,5 +7,5 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Run Prettier linting check
+      - name: Run Prettier formatting check
         run: npx prettier . --check
