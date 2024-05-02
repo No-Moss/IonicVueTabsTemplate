@@ -4,7 +4,11 @@
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
 
-      <ion-tab-bar data-test="global-nav-bar">
+      <ion-tab-bar
+        data-test="global-nav-bar"
+        id="global-navigation"
+        tabindex="0"
+      >
         <nav>
           <router-link to="Home" class="icon-router-link">
             <ion-icon :icon="logoVue" class="site-logo"
@@ -67,6 +71,10 @@ ion-tab-bar {
     background: var(--ion-color-light);
     color: var(--ion-color-dark);
   }
+  &:focus-visible {
+    border: solid var(--ion-color-primary-shade) 3px;
+    outline: none;
+  }
 }
 
 ion-tab-button {
@@ -86,6 +94,7 @@ ion-icon {
   margin-left: 5px;
   margin-right: 10px;
 }
+
 .ion-focused {
   --background-focused: var(--ion-color-dark);
   border: solid var(--ion-color-primary-shade) 3px;

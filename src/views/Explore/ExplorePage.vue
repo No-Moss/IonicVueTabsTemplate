@@ -27,6 +27,7 @@ import HeaderContainer from "@/components/Header/HeaderContainer.vue";
   height: 100%;
   &:focus-visible {
     border: solid var(--ion-color-primary-shade) 5px;
+    outline: none;
   }
 }
 </style>

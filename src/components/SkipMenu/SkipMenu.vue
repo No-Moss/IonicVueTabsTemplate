@@ -3,12 +3,20 @@
     <label class="label">Skip To</label>
     <br />
     <button
-      class="main-content-button"
+      class="skip-menu-button"
       data-test="main-content-button"
       id="main-content-button"
       @click="focusMainContent()"
     >
       Main content
+    </button>
+    <button
+      class="skip-menu-button"
+      data-test="global-nav-button"
+      id="global-nav-button"
+      @click="focusGlobalNav()"
+    >
+      Global Navigation
     </button>
   </div>
 </template>
@@ -18,6 +26,9 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 const focusMainContent = () => {
   document.getElementById(router.currentRoute.value.meta.mainContentId).focus();
+};
+const focusGlobalNav = () => {
+  document.getElementById("global-navigation").focus();
 };
 </script>
 
@@ -48,7 +59,7 @@ const focusMainContent = () => {
     transform: translateY(0px);
   }
 }
-.main-content-button {
+.skip-menu-button {
   color: var(--ion-color-dark);
   font-size: 16px;
   background-color: var(--ion-color-light);
@@ -61,7 +72,7 @@ const focusMainContent = () => {
   border-radius: 6px;
   text-decoration: underline;
 }
-.main-content-button:focus {
+.skip-menu-button:focus {
   background-color: var(--lighter-grey);
 }
 @include breakpoint(medium) {
