@@ -12,3 +12,8 @@ import { IonPage, IonContent } from "@ionic/vue";
 import ExploreContainer from "@/components/Explore/ExploreContainer.vue";
 import HeaderContainer from "@/components/Header/HeaderContainer.vue";
 </script>
+<style lang="scss" scoped>
+ion-content {
+  --background: var(--ion-color-dark);
+}
+</style>
