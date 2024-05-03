@@ -5,7 +5,7 @@
       class="skip-menu-button"
       data-test="main-content-button"
       id="main-content-button"
-      @click="focusMainContent()"
+      @click="focus(router.currentRoute.value.meta.mainContentId)"
     >
       Main content
     </button>
@@ -13,7 +13,7 @@
       class="skip-menu-button"
       data-test="global-nav-button"
       id="global-nav-button"
-      @click="focusGlobalNav()"
+      @click="focus('global-navigation')"
     >
       Global Navigation
     </button>
@@ -23,11 +23,8 @@
 <script setup>
 import { useRouter } from "vue-router";
 const router = useRouter();
-const focusMainContent = () => {
-  document.getElementById(router.currentRoute.value.meta.mainContentId).focus();
-};
-const focusGlobalNav = () => {
-  document.getElementById("global-navigation").focus();
+const focus = (elementId) => {
+  document.getElementById(elementId).focus();
 };
 </script>
 
