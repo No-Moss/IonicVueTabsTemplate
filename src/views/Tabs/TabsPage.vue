@@ -1,9 +1,14 @@
 <template>
   <ion-page>
+    <SkipMenu></SkipMenu>
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
 
-      <ion-tab-bar data-test="global-nav-bar">
+      <ion-tab-bar
+        data-test="global-nav-bar"
+        id="global-navigation"
+        tabindex="0"
+      >
         <nav>
           <router-link to="Home" class="icon-router-link">
             <ion-icon :icon="logoVue" class="site-logo"
@@ -45,11 +50,13 @@ import {
   IonRouterOutlet,
 } from "@ionic/vue";
 import { ellipse, square, triangle, logoVue } from "ionicons/icons";
+import SkipMenu from "@/components/SkipMenu/SkipMenu.vue";
 </script>
 <style lang="scss" scoped>
 @import "@/theme/breakpoints.scss";
 
-.site-logo {
+.site-logo,
+.icon-router-link {
   display: none;
 }
 
@@ -63,6 +70,10 @@ ion-tab-bar {
   :hover {
     background: var(--ion-color-light);
     color: var(--ion-color-dark);
+  }
+  &:focus-visible {
+    border: solid var(--ion-color-primary-shade) 3px;
+    outline: none;
   }
 }
 
@@ -83,6 +94,7 @@ ion-icon {
   margin-left: 5px;
   margin-right: 10px;
 }
+
 .ion-focused {
   --background-focused: var(--ion-color-dark);
   border: solid var(--ion-color-primary-shade) 3px;
@@ -103,6 +115,7 @@ ion-icon {
   }
 
   .icon-router-link {
+    display: flex;
     width: 100%;
     &:focus-visible {
       outline: none;
