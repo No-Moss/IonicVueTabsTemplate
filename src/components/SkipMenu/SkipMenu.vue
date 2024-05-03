@@ -1,7 +1,6 @@
 <template>
   <div class="container" data-test="skip-menu-container">
     <label class="label">Skip To</label>
-    <br />
     <button
       class="skip-menu-button"
       data-test="main-content-button"
