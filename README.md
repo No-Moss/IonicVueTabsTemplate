@@ -4,10 +4,18 @@ This project provides an extension to the tabs template that is provided by Ioni
 
 - Basic desktop compatible UI
 - Cypress testing
-- WCAG 2.1 AA compliance
+- WCAG 2.2 AA compliance
 - Project formatting (using [Prettier](https://prettier.io/))
 
 Note: the template retains all provisions afforded by the original template as provided by Ionic.
+
+## How to best use this template
+
+This template provides some additional essential elements to help VueJS, Ionic developers get started on their hybrid projects easier and faster.
+
+You may start your project with this template by cloning this repository on to your local environment. Alternatively, you can copy components and concepts present in this template.
+
+For example, you may copy the src/components/SkipMenu/SkipMenu.vue file to easily incorporate part of WCAG 2.2 AA standard to your code.
 
 ## Package repository setup
 
@@ -42,14 +50,44 @@ ionic serve
 
 ### Running project formatting
 
-Within the project directory, use the following command in terminal to check the format of the project
+Within the project directory, use the following command in terminal to check whether the formatting of the project complies by Prettier 3.2.5 default rules.
 
 ```bash
 npm run format
 ```
 
-This command will check if the project complies with the formatting rules as
+This command will exit with an error if the project has formatting errors. To fix formatting errors, run the following command
+
+```bash
+npm run format-fix
+```
 
 ### Running Cypress End to End Tests
 
+Use the following command to run Cypress E2E testing on CLI
+
+```bash
+npm run test:e2e
+```
+
+To run Cypress E2E testing on the Cypress GUI, run this command
+
+```bash
+npm run test:e2e:ui
+```
+
 ### Running Cypress Components Tests
+
+Note: There are currently no component tests on the project.
+
+The following command may be used to run the component tests
+
+```bash
+npm run test:component
+```
+
+To run Cypress component testing on the Cypress GUI, run this command
+
+```bash
+npm run test:component:ui
+```

@@ -5,8 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
+    "test:component": "cypress run --component",
+    "test:e2e:ui": "vue-cli-service test:e2e --mode testing",
+    "test:e2e": "vue-cli-service test:e2e --headless --mode testing",
     "format": "prettier --check .",
     "format-fix": "prettier --write ."
   },
