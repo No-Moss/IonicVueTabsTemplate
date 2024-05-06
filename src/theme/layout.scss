@@ -1,0 +1,19 @@
+@import "@/theme/breakpoints.scss";
+ion-content {
+  --background: var(--ion-color-dark);
+}
+
+@include breakpoint(medium) {
+  .content-container {
+    width: calc(100% - 200px);
+    left: 200px;
+  }
+}
+.content-container {
+  position: relative;
+  height: 100%;
+  &:focus-visible {
+    border: solid var(--ion-color-primary-shade) 5px;
+    outline: none;
+  }
+}
