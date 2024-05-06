@@ -19,14 +19,23 @@ const routes: Array<RouteRecordRaw> = [
         path: "Home",
         name: "Home",
         component: () => import("@/views/Home/HomePage.vue"),
+        meta: {
+          mainContentId: "home-main-content",
+        },
       },
       {
         path: "Explore",
         component: () => import("@/views/Explore/ExplorePage.vue"),
+        meta: {
+          mainContentId: "explore-main-content",
+        },
       },
       {
         path: "Profile",
         component: () => import("@/views/Profile/ProfilePage.vue"),
+        meta: {
+          mainContentId: "profile-main-content",
+        },
       },
     ],
   },
