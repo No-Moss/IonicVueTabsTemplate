@@ -20,8 +20,9 @@ import "@ionic/vue/css/text-transformation.css";
 import "@ionic/vue/css/flex-utils.css";
 import "@ionic/vue/css/display.css";
 
-/* Theme variables */
+/* Theme and layout variables */
 import "./theme/variables.css";
+import "./theme/layout.scss";
 
 const app = createApp(App).use(IonicVue).use(router);
 
