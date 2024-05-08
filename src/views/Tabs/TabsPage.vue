@@ -1,6 +1,7 @@
 <template>
   <ion-page>
-    <SkipMenu></SkipMenu>
+    <SkipMenu />
+
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
 
@@ -10,9 +11,7 @@
         tabindex="0"
       >
         <nav>
-          <router-link to="Home" class="icon-router-link">
-            <ion-icon :icon="logoVue" class="site-logo"
-          /></router-link>
+          <SiteLogo class="site-logo" />
           <ion-tab-button class="home" tab="Home" href="/tabs/Home">
             <div class="tab-button-content" data-test="home-button">
               <ion-icon aria-hidden="true" :icon="triangle" />
@@ -49,19 +48,19 @@ import {
   IonPage,
   IonRouterOutlet,
 } from "@ionic/vue";
-import { ellipse, square, triangle, logoVue } from "ionicons/icons";
+import { ellipse, square, triangle } from "ionicons/icons";
 import SkipMenu from "@/components/SkipMenu/SkipMenu.vue";
+import SiteLogo from "@/components/SiteLogo/SiteLogo.vue";
 </script>
 <style lang="scss" scoped>
 @import "@/theme/breakpoints.scss";
-
-.site-logo,
-.icon-router-link {
-  display: none;
-}
-
+@import "@/theme/desktop-nav-layout.scss";
 nav {
   display: contents;
+}
+
+.site-logo {
+  display: none;
 }
 
 ion-tab-bar {
@@ -101,62 +100,7 @@ ion-icon {
 }
 @include breakpoint(medium) {
   .site-logo {
-    display: flex;
-    color: var(--ion-color-light);
-    transform: scale(1.25);
-    height: 69px;
-    width: 100%;
-    margin: 20px auto 10px auto;
-    cursor: pointer;
-    &:hover {
-      color: var(--ion-color-primary-shade);
-      background: transparent;
-    }
-  }
-
-  .icon-router-link {
-    display: flex;
-    width: 100%;
-    &:focus-visible {
-      outline: none;
-      border: solid var(--ion-color-primary-shade) 3px;
-    }
-    &:hover {
-      background: transparent;
-    }
-  }
-
-  ion-tab-bar {
-    position: fixed;
-    left: 0;
-    width: 200px;
-    height: 100vh;
-    flex-direction: column;
-    place-content: flex-start;
-    display: flex;
-    gap: 5px;
-  }
-
-  ion-tab-button {
-    max-height: 60px;
-    width: 100%;
-    padding: 0px;
-    ion-icon {
-      margin-left: 0px;
-      margin-right: 20px;
-    }
-    ion-label {
-      font-size: 20px;
-    }
-  }
-
-  .tab-button-content {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-left: 10px;
+    display: block;
   }
 }
 </style>
