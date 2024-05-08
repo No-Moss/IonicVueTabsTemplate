@@ -1,10 +1,12 @@
 # Ionic Tabs Template - Upgraded
 
-This project provides an extension to the tabs template that is provided by Ionic. It provides the following additional functionalities.
+The inception idea of this project was to add to the "out of the box" template that Ionic provides so it's easier and faster for developers to get started on a hybrid application. We noticed some clear areas where this template could improve (such as keyboard accesibility and desktop UI compatibility) and set out to solve them in this project.
+
+Hence, this project is an extension of the tabs template that is provided by Ionic. It provides the following additional functionalities.
 
 - Basic desktop compatible UI
 - Cypress testing
-- WCAG 2.2 AA compliance
+- Keyboard accessibility ("skip to" navigation element that can be accessed upon tabbing)
 - Project formatting (using [Prettier](https://prettier.io/))
 
 Note: the template retains all provisions afforded by the original template as provided by Ionic.
